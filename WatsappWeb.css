@@ -4,13 +4,16 @@
     padding: 0;
 }
 .container{
+    min-width: 250px;
     background-color: #D7DAD5;
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
+
 .top-section{
     background-color: #1EBFA6;
     height: 35%;
@@ -37,9 +40,15 @@
     background-color: white;
     font-size: small;
     display: flex;
+    justify-content: space-between;
     position: fixed;
     bottom: 0;
     z-index: 1;
+}
+@media screen and (max-width: 450px) {
+    .main-section{
+        flex-direction: column;
+    }
 }
 .main-section-content{
     margin: 20px;
